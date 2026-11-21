@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiente"
+    tools:context=".MainActivity3">
+
+
+
+    <ImageButton
+        android:id="@+id/btnVoltarPerfil"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Voltar"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#1B2E1E" />
+
+    <!-- CÍRCULO BRANCO COM AVATAR ROXO -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAvatar"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="70dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:contentDescription="Foto de perfil"
+            android:src="@drawable/ic_person_outline"
+            app:tint="#4A3B8C" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- CONTAINER DOS CAMPOS BRANCOS -->
+    <LinearLayout
+        android:id="@+id/containerCampos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardAvatar">
+
+        <!-- CAMPO USUÁRIO (SEM O X) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="2dp">
+
+            <EditText
+                android:id="@+id/editUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="Usuário:"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="16dp"
+                android:textColor="#333333"
+                android:textColorHint="#444444"
+                android:textSize="15sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- CAMPO EMAIL (SEM O X) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="2dp">
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="Email:"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="16dp"
+                android:textColor="#333333"
+                android:textColorHint="#444444"
+                android:textSize="15sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- CAMPO DATA DE NASCIMENTO (COM O X NA FRENTE) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="4dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <EditText
+                    android:id="@+id/editNascimento"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Data de nascimento:"
+                    android:inputType="date"
+                    android:textColor="#333333"
+                    android:textColorHint="#444444"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/btnLimparNascimento"
+                    android:layout_width="49dp"
+                    android:layout_height="49dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Limpar data de nascimento"
+                    android:src="@drawable/ic_cancel"
+                    app:tint="#444444" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- BOTÃO LOGOUT VERMELHO -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="24dp"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:backgroundTint="#F43B3B"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerCampos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
