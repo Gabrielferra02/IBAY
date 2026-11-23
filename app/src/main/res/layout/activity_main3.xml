@@ -8,10 +8,8 @@
     android:background="@drawable/bg_gradiente"
     tools:context=".MainActivity3">
 
-
-
     <ImageButton
-        android:id="@+id/btnVoltarPerfil"
+        android:id="@+id/buttonvoltar2"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -23,7 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tint="#1B2E1E" />
 
-    <!-- CÍRCULO BRANCO COM AVATAR ROXO -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardAvatar"
         android:layout_width="140dp"
@@ -45,7 +42,6 @@
             app:tint="#4A3B8C" />
     </androidx.cardview.widget.CardView>
 
-    <!-- CONTAINER DOS CAMPOS BRANCOS -->
     <LinearLayout
         android:id="@+id/containerCampos"
         android:layout_width="match_parent"
@@ -56,7 +52,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardAvatar">
 
-        <!-- CAMPO USUÁRIO (SEM O X) -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -79,7 +74,6 @@
                 android:textSize="15sp" />
         </androidx.cardview.widget.CardView>
 
-        <!-- CAMPO EMAIL (SEM O X) -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -102,7 +96,6 @@
                 android:textSize="15sp" />
         </androidx.cardview.widget.CardView>
 
-        <!-- CAMPO DATA DE NASCIMENTO (COM O X NA FRENTE) -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -143,12 +136,11 @@
 
     </LinearLayout>
 
-    <!-- BOTÃO LOGOUT VERMELHO -->
     <Button
-        android:id="@+id/btnLogout"
+        android:id="@+id/buttonlogout"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:paddingHorizontal="24dp"
         android:text="Logout"
         android:textAllCaps="false"
@@ -157,7 +149,25 @@
         app:backgroundTint="#F43B3B"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerCampos" />
+
+    <Button
+        android:id="@+id/buttoncarrinho2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="24dp"
+        android:text="Carrinho"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:backgroundTint="#2196F3"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toEndOf="@+id/buttonlogout"
         app:layout_constraintTop_toBottomOf="@id/containerCampos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -62,20 +62,41 @@
             android:textColor="#000000"
             android:textColorHint="#333333" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
             android:layout_marginBottom="16dp"
-            android:backgroundTint="#1E88E5"
-            android:text="Esqueceu sua senha?"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            app:cornerRadius="4dp" />
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttoncriar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1E88E5"
+                android:text="Criar conta"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="4dp" />
+
+            <Button
+                android:id="@+id/btnesqueceu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="#1E88E5"
+                android:text="Esqueceu sua senha?"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="4dp" />
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonlogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#29B32C"
@@ -84,4 +105,5 @@
             app:cornerRadius="4dp" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

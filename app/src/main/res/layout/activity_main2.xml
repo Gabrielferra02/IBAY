@@ -37,7 +37,7 @@
                     android:paddingHorizontal="12dp">
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/buttonvoltar1"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
@@ -64,7 +64,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/buttonperfil"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
@@ -442,6 +442,13 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
+
+            <Button
+                android:id="@+id/buttoncarrinho1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundTint="#1976D2"
+                android:text="Carrinho" />
 
         </LinearLayout>
     </ScrollView>
